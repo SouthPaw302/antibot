@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# AntiBot local launcher: starts Ollama, gateway, and opens dashboard.
+# Works without internet (dashboard + Ollama). Telegram needs network.
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ANTIBOT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+URL="http://127.0.0.1:18789/"
+
+# Start Ollama if not responding
+if command -v ollama >/dev/null 2>&1; then
+  if ! curl -fsS --max-time 1 http://127.0.0.1:11434/api/tags >/dev/null 2>&1; then
+    (nohup ollama serve >/tmp/ollama-serve.log 2>&1 &) || true
+    sleep 0.5
+  fi
+fi
+
+# Start gateway if not already running on 18789
+if ! curl -fsS --max-time 1 "$URL" >/dev/null 2>&1; then
+  echo "Starting AntiBot gateway..."
+  cd "$ANTIBOT_ROOT"
+  export ANTIBOT_STATE_DIR="${ANTIBOT_STATE_DIR:-$HOME/.antibot}"
+  nohup node antibot.mjs gateway --port 18789 >/tmp/antibot-gateway.log 2>&1 &
+  sleep 2
+fi
+
+if command -v xdg-open >/dev/null 2>&1; then
+  xdg-open "$URL" >/dev/null 2>&1 &
+  echo "Opened: $URL"
+else
+  echo "Open this in a browser: $URL"
+fi
+
+echo "Local model (terminal): ollama run lume-llama-unbound"

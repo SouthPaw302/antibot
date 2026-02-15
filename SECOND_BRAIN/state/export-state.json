@@ -1,0 +1,93 @@
+{
+  "files": {
+    "0a54c672-11ba-4d28-afb0-0e7f4298c8fb.jsonl": {
+      "mtime": 1770364926,
+      "size": 43702
+    },
+    "119faff6-598c-45b8-ab73-eed6da48ca52.jsonl": {
+      "mtime": 1770280396,
+      "size": 635754
+    },
+    "22f7c8e6-b36d-4d6c-8a65-ba843e52d93d.jsonl": {
+      "mtime": 1770364852,
+      "size": 31207
+    },
+    "2e610658-25c4-401e-801f-c507df21d689.jsonl": {
+      "mtime": 1770796889,
+      "size": 67141
+    },
+    "2f23787f-35bb-4e4d-902a-ddf263f7d67e.jsonl": {
+      "mtime": 1770969700,
+      "size": 69643
+    },
+    "30f9df34-fde2-48da-8ca3-8b22cb6df680.jsonl": {
+      "mtime": 1770624090,
+      "size": 59223
+    },
+    "37cc831f-31ce-4edd-a80d-00da49867599.jsonl": {
+      "mtime": 1771132798,
+      "size": 6593074
+    },
+    "458b379a-242d-40ae-89cd-437995928e06.jsonl": {
+      "mtime": 1770280428,
+      "size": 19971
+    },
+    "4826687f-7869-4123-aa58-fcd4b0a23c3b.jsonl": {
+      "mtime": 1770190548,
+      "size": 7341264
+    },
+    "51b604b5-da7e-4a29-8e1c-ece0797e3e37.jsonl": {
+      "mtime": 1770397476,
+      "size": 207637
+    },
+    "51b8741e-c102-46a5-ba05-f8c5bac8213c.jsonl": {
+      "mtime": 1770624173,
+      "size": 56785
+    },
+    "9b122bf7-8762-4a7a-b6ad-78aa7f5f15cf.jsonl": {
+      "mtime": 1770537818,
+      "size": 59699
+    },
+    "a5cc6172-4d9f-49d4-8020-e0d8b8b9b58f.jsonl": {
+      "mtime": 1770451257,
+      "size": 48211
+    },
+    "b9cc7c3d-1b33-4853-843e-5145a843403d.jsonl": {
+      "mtime": 1770451377,
+      "size": 493659
+    },
+    "ba6be563-ac2b-4e5d-98a9-0299a8663598.jsonl": {
+      "mtime": 1770710557,
+      "size": 64665
+    },
+    "bcb80ed2-521f-4d3e-9602-e8fe71c8aef8.jsonl": {
+      "mtime": 1770279668,
+      "size": 304550
+    },
+    "c107f90e-425d-4fee-8a4e-c0328ed0ae42.jsonl": {
+      "mtime": 1770710483,
+      "size": 64517
+    },
+    "c3c14667-e47c-4c01-aeb0-df6e6c7416e3.jsonl": {
+      "mtime": 1771056103,
+      "size": 64329
+    },
+    "cb5d0ac7-ea85-4ac8-96ac-8de00aeee455.jsonl": {
+      "mtime": 1771137261,
+      "size": 208076
+    },
+    "d1e1274f-1526-46d5-8d9e-a7a1cc294ed2.jsonl": {
+      "mtime": 1770883297,
+      "size": 50545
+    },
+    "d7421411-cea5-4486-953e-03109aa2931b.jsonl": {
+      "mtime": 1770537754,
+      "size": 129149
+    }
+  },
+  "lastRun": "2026-02-15T02:10:25-0500",
+  "stats": {
+    "copied": 0,
+    "skipped": 21
+  }
+}

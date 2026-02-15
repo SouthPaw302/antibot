@@ -12,6 +12,13 @@ export function resolveDefaultAgentWorkspaceDir(
   homedir: () => string = os.homedir,
 ): string {
   const home = resolveRequiredHomeDir(env, homedir);
+  const antibotState = env.ANTIBOT_STATE_DIR?.trim();
+  if (antibotState) {
+    const resolved = antibotState.startsWith("~")
+      ? path.join(home, antibotState.slice(1))
+      : antibotState;
+    return path.join(resolved, "workspace");
+  }
   const profile = env.OPENCLAW_PROFILE?.trim();
   if (profile && profile.toLowerCase() !== "default") {
     return path.join(home, ".openclaw", `workspace-${profile}`);

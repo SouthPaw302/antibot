@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "",
   "bin": {
+    "antibot": "antibot.mjs",
     "openclaw": "openclaw.mjs"
   },
   "files": [

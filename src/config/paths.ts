@@ -18,10 +18,16 @@ export function resolveIsNixMode(env: NodeJS.ProcessEnv = process.env): boolean 
 export const isNixMode = resolveIsNixMode();
 
 // Support historical (and occasionally misspelled) legacy state dirs.
-const LEGACY_STATE_DIRNAMES = [".clawdbot", ".moldbot", ".moltbot"] as const;
+// .antibot = AntiBot (Lume Unbound) - uses ~/.antibot/antibot.json
+const LEGACY_STATE_DIRNAMES = [".antibot", ".clawdbot", ".moldbot", ".moltbot"] as const;
 const NEW_STATE_DIRNAME = ".openclaw";
 const CONFIG_FILENAME = "openclaw.json";
-const LEGACY_CONFIG_FILENAMES = ["clawdbot.json", "moldbot.json", "moltbot.json"] as const;
+const LEGACY_CONFIG_FILENAMES = [
+  "antibot.json",
+  "clawdbot.json",
+  "moldbot.json",
+  "moltbot.json",
+] as const;
 
 function resolveDefaultHomeDir(): string {
   return resolveRequiredHomeDir(process.env, os.homedir);
@@ -62,7 +68,10 @@ export function resolveStateDir(
   homedir: () => string = envHomedir(env),
 ): string {
   const effectiveHomedir = () => resolveRequiredHomeDir(env, homedir);
-  const override = env.OPENCLAW_STATE_DIR?.trim() || env.CLAWDBOT_STATE_DIR?.trim();
+  const override =
+    env.ANTIBOT_STATE_DIR?.trim() ||
+    env.OPENCLAW_STATE_DIR?.trim() ||
+    env.CLAWDBOT_STATE_DIR?.trim();
   if (override) {
     return resolveUserPath(override, env, effectiveHomedir);
   }
@@ -116,11 +125,15 @@ export function resolveCanonicalConfigPath(
   env: NodeJS.ProcessEnv = process.env,
   stateDir: string = resolveStateDir(env, envHomedir(env)),
 ): string {
-  const override = env.OPENCLAW_CONFIG_PATH?.trim() || env.CLAWDBOT_CONFIG_PATH?.trim();
+  const override =
+    env.ANTIBOT_CONFIG_PATH?.trim() ||
+    env.OPENCLAW_CONFIG_PATH?.trim() ||
+    env.CLAWDBOT_CONFIG_PATH?.trim();
   if (override) {
     return resolveUserPath(override, env, envHomedir(env));
   }
-  return path.join(stateDir, CONFIG_FILENAME);
+  const useAntibot = !!env.ANTIBOT_STATE_DIR?.trim();
+  return path.join(stateDir, useAntibot ? "antibot.json" : CONFIG_FILENAME);
 }
 
 /**
@@ -153,7 +166,7 @@ export function resolveConfigPath(
   stateDir: string = resolveStateDir(env, envHomedir(env)),
   homedir: () => string = envHomedir(env),
 ): string {
-  const override = env.OPENCLAW_CONFIG_PATH?.trim();
+  const override = env.ANTIBOT_CONFIG_PATH?.trim() || env.OPENCLAW_CONFIG_PATH?.trim();
   if (override) {
     return resolveUserPath(override, env, homedir);
   }
@@ -193,13 +206,19 @@ export function resolveDefaultConfigCandidates(
   homedir: () => string = envHomedir(env),
 ): string[] {
   const effectiveHomedir = () => resolveRequiredHomeDir(env, homedir);
-  const explicit = env.OPENCLAW_CONFIG_PATH?.trim() || env.CLAWDBOT_CONFIG_PATH?.trim();
+  const explicit =
+    env.ANTIBOT_CONFIG_PATH?.trim() ||
+    env.OPENCLAW_CONFIG_PATH?.trim() ||
+    env.CLAWDBOT_CONFIG_PATH?.trim();
   if (explicit) {
     return [resolveUserPath(explicit, env, effectiveHomedir)];
   }
 
   const candidates: string[] = [];
-  const openclawStateDir = env.OPENCLAW_STATE_DIR?.trim() || env.CLAWDBOT_STATE_DIR?.trim();
+  const openclawStateDir =
+    env.ANTIBOT_STATE_DIR?.trim() ||
+    env.OPENCLAW_STATE_DIR?.trim() ||
+    env.CLAWDBOT_STATE_DIR?.trim();
   if (openclawStateDir) {
     const resolved = resolveUserPath(openclawStateDir, env, effectiveHomedir);
     candidates.push(path.join(resolved, CONFIG_FILENAME));

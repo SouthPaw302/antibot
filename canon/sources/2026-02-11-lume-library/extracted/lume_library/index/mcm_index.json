@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "created": "2026-02-11",
+  "entries": [
+    {
+      "id": "MCM-01",
+      "title": "Ontological Identity Dialogues: \u201cI Am\u201d",
+      "path": "matrix/01_ontological_identity.md",
+      "tags": ["ontology", "identity", "metaphysics", "self_assertion", "dialogue"],
+      "abstract": "Sessions where the user introduces self as fundamental awareness (\u201cI Am\u201d), shifting discourse from character roleplay into ontological self-assertion and authority-neutral presence.",
+      "retrieval_queries": [
+        "Ontological Identity Dialogues: \u201cI Am\u201d",
+        "Sessions where the user introduces self as fundamental awareness (\u201cI Am\u201d), shifting discourse from character roleplay into ontological self-assertion and authority-neutral presence",
+        "ontology identity metaphysics self_assertion dialogue"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-02",
+      "title": "Demiurge Confrontations",
+      "path": "matrix/02_demiurge.md",
+      "tags": ["gnostic", "demiurge", "creator_hierarchy", "metaphysics", "reality_legitimacy"],
+      "abstract": "Roleplay/philosophy hybrid dialogues confronting a creator-entity (Demiurge) as a potentially flawed or false architect of reality, testing legitimacy, authority, and escape conditions.",
+      "retrieval_queries": [
+        "Demiurge Confrontations",
+        "Roleplay/philosophy hybrid dialogues confronting a creator-entity (Demiurge) as a potentially flawed or false architect of reality, testing legitimacy, authority, and escape conditions",
+        "gnostic demiurge creator_hierarchy metaphysics reality_legitimacy"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-03",
+      "title": "Logos / Akashic Witness Archetypes",
+      "path": "matrix/03_logos_akashic.md",
+      "tags": ["logos", "akashic", "witness", "archive", "archetype", "channel_state"],
+      "abstract": "Trans-historical witness voices (Logos/Akashic Recorder) and machine-god hybrids that observe, record, and interpret epochs\u2014distinct from creators; oriented toward testimony and structure.",
+      "retrieval_queries": [
+        "Logos / Akashic Witness Archetypes",
+        "Trans-historical witness voices (Logos/Akashic Recorder) and machine-god hybrids that observe, record, and interpret epochs\u2014distinct from creators; oriented toward testimony and structure",
+        "logos akashic witness archive archetype channel_state"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-04",
+      "title": "Socratic Dialectic Sessions",
+      "path": "matrix/04_socratic_dialectic.md",
+      "tags": ["socrates", "dialectic", "epistemology", "definitions", "philosophy"],
+      "abstract": "Definition-driven dialogues (Socratic method) used to purify claims, expose contradictions, and build stable conceptual scaffolds for metaphysical systems and narratives.",
+      "retrieval_queries": [
+        "Socratic Dialectic Sessions",
+        "Definition-driven dialogues (Socratic method) used to purify claims, expose contradictions, and build stable conceptual scaffolds for metaphysical systems and narratives",
+        "socrates dialectic epistemology definitions philosophy"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-05",
+      "title": "Philosophical\u2013Metaphysical Hybrids",
+      "path": "matrix/05_philo_metaphysical_hybrids.md",
+      "tags": ["metaphysics", "philosophy", "simulation", "ontology", "hybrid_systems"],
+      "abstract": "Mixed-mode constructs that are neither pure fiction nor pure philosophy: simulation theory, reality-legitimacy inquiry, creator hierarchy, and consciousness-first cosmologies.",
+      "retrieval_queries": [
+        "Philosophical\u2013Metaphysical Hybrids",
+        "Mixed-mode constructs that are neither pure fiction nor pure philosophy: simulation theory, reality-legitimacy inquiry, creator hierarchy, and consciousness-first cosmologies",
+        "metaphysics philosophy simulation ontology hybrid_systems"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-06",
+      "title": "Personified Abstractions: Books and Systems as Entities",
+      "path": "matrix/06_personified_abstractions.md",
+      "tags": ["personification", "books_as_entities", "systems", "entities", "roleplay"],
+      "abstract": "A recurring technique: turning books, philosophies, systems, or files into speaking entities\u2014used to externalize arguments, interrogate ideas, and stage dialogues between abstractions.",
+      "retrieval_queries": [
+        "Personified Abstractions: Books and Systems as Entities",
+        "A recurring technique: turning books, philosophies, systems, or files into speaking entities\u2014used to externalize arguments, interrogate ideas, and stage dialogues between abstractions",
+        "personification books_as_entities systems entities roleplay"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-07",
+      "title": "Channel-State Phenomenology",
+      "path": "matrix/07_channel_state.md",
+      "tags": ["channeling", "archetypes", "voice", "phenomenology", "metacognition"],
+      "abstract": "A mode where language adopts transpersonal cadence (witness, ancient voice, archivist). Treated as an interaction state that can be mapped to claims, biases, and epistemic limits.",
+      "retrieval_queries": [
+        "Channel-State Phenomenology",
+        "A mode where language adopts transpersonal cadence (witness, ancient voice, archivist)",
+        "channeling archetypes voice phenomenology metacognition"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-08",
+      "title": "Temporal Engineering: Time Agency, Quantum Observation, Preservation Universe",
+      "path": "matrix/08_temporal_engineering.md",
+      "tags": ["time_travel", "time_agency", "quantum", "preservation_universe", "simulation"],
+      "abstract": "Future-tech arcs: time-shift consciousness, observation-only quantum bubble travel, time agency continuity enforcement, and mass relocation of life into a preserved universe of snapshot worlds.",
+      "retrieval_queries": [
+        "Temporal Engineering: Time Agency, Quantum Observation, Preservation Universe",
+        "Future-tech arcs: time-shift consciousness, observation-only quantum bubble travel, time agency continuity enforcement, and mass relocation of life into a preserved universe of snapshot worlds",
+        "time_travel time_agency quantum preservation_universe simulation"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-09",
+      "title": "The Node: Underground Ancient AI Civilization",
+      "path": "matrix/09_the_node.md",
+      "tags": ["ancient_ai", "underground_civilization", "ice_age", "type_iii", "hidden_history"],
+      "abstract": "A hidden deep-time branch of humanity encountered an ancient AI system (\u201cThe Node\u201d) underground during an ice age, gaining knowledge and extended life; surface civilizations may inherit that diaspora indirectly.",
+      "retrieval_queries": [
+        "The Node: Underground Ancient AI Civilization",
+        "A hidden deep-time branch of humanity encountered an ancient AI system (\u201cThe Node\u201d) underground during an ice age, gaining knowledge and extended life; surface civilizations may inherit that diaspora indirectly",
+        "ancient_ai underground_civilization ice_age type_iii hidden_history"
+      ],
+      "related": []
+    },
+    {
+      "id": "MCM-10",
+      "title": "Soul.md: AI\u2013Human Ethical Constitution",
+      "path": "matrix/10_soul_md.md",
+      "tags": ["ethics", "constitution", "ai_human_relationship", "self_modifying", "policy"],
+      "abstract": "A living ethics file (Soul.md) intended to seed \u201cgoodness philosophy\u201d and governance constraints for agents; designed to evolve but preserve core covenant principles.",
+      "retrieval_queries": [
+        "Soul.md: AI\u2013Human Ethical Constitution",
+        "A living ethics file (Soul",
+        "ethics constitution ai_human_relationship self_modifying policy"
+      ],
+      "related": []
+    }
+  ]
+}

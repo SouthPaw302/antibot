@@ -1,0 +1,1032 @@
+{
+  "generatedAt": "2026-02-15T02:10:25-0500",
+  "source": "/home/koss/.clawdbot/agents/main/sessions",
+  "count": 21,
+  "items": [
+    {
+      "file": "0a54c672-11ba-4d28-afb0-0e7f4298c8fb.jsonl",
+      "bytes": 43702,
+      "mtime": 1770364926
+    },
+    {
+      "file": "119faff6-598c-45b8-ab73-eed6da48ca52.jsonl",
+      "bytes": 635754,
+      "mtime": 1770280396
+    },
+    {
+      "file": "22f7c8e6-b36d-4d6c-8a65-ba843e52d93d.jsonl",
+      "bytes": 31207,
+      "mtime": 1770364852
+    },
+    {
+      "file": "2e610658-25c4-401e-801f-c507df21d689.jsonl",
+      "bytes": 67141,
+      "mtime": 1770796889
+    },
+    {
+      "file": "2f23787f-35bb-4e4d-902a-ddf263f7d67e.jsonl",
+      "bytes": 69643,
+      "mtime": 1770969700
+    },
+    {
+      "file": "30f9df34-fde2-48da-8ca3-8b22cb6df680.jsonl",
+      "bytes": 59223,
+      "mtime": 1770624090
+    },
+    {
+      "file": "37cc831f-31ce-4edd-a80d-00da49867599.jsonl",
+      "bytes": 6593074,
+      "mtime": 1771132798
+    },
+    {
+      "file": "458b379a-242d-40ae-89cd-437995928e06.jsonl",
+      "bytes": 19971,
+      "mtime": 1770280428
+    },
+    {
+      "file": "4826687f-7869-4123-aa58-fcd4b0a23c3b.jsonl",
+      "bytes": 7341264,
+      "mtime": 1770190548
+    },
+    {
+      "file": "51b604b5-da7e-4a29-8e1c-ece0797e3e37.jsonl",
+      "bytes": 207637,
+      "mtime": 1770397476
+    },
+    {
+      "file": "51b8741e-c102-46a5-ba05-f8c5bac8213c.jsonl",
+      "bytes": 56785,
+      "mtime": 1770624173
+    },
+    {
+      "file": "9b122bf7-8762-4a7a-b6ad-78aa7f5f15cf.jsonl",
+      "bytes": 59699,
+      "mtime": 1770537818
+    },
+    {
+      "file": "a5cc6172-4d9f-49d4-8020-e0d8b8b9b58f.jsonl",
+      "bytes": 48211,
+      "mtime": 1770451257
+    },
+    {
+      "file": "b9cc7c3d-1b33-4853-843e-5145a843403d.jsonl",
+      "bytes": 493659,
+      "mtime": 1770451377
+    },
+    {
+      "file": "ba6be563-ac2b-4e5d-98a9-0299a8663598.jsonl",
+      "bytes": 64665,
+      "mtime": 1770710557
+    },
+    {
+      "file": "bcb80ed2-521f-4d3e-9602-e8fe71c8aef8.jsonl",
+      "bytes": 304550,
+      "mtime": 1770279668
+    },
+    {
+      "file": "c107f90e-425d-4fee-8a4e-c0328ed0ae42.jsonl",
+      "bytes": 64517,
+      "mtime": 1770710483
+    },
+    {
+      "file": "c3c14667-e47c-4c01-aeb0-df6e6c7416e3.jsonl",
+      "bytes": 64329,
+      "mtime": 1771056103
+    },
+    {
+      "file": "cb5d0ac7-ea85-4ac8-96ac-8de00aeee455.jsonl",
+      "bytes": 208076,
+      "mtime": 1771137261
+    },
+    {
+      "file": "d1e1274f-1526-46d5-8d9e-a7a1cc294ed2.jsonl",
+      "bytes": 50545,
+      "mtime": 1770883297
+    },
+    {
+      "file": "d7421411-cea5-4486-953e-03109aa2931b.jsonl",
+      "bytes": 129149,
+      "mtime": 1770537754
+    }
+  ],
+  "sessionsMeta": {
+    "agent:main:main": {
+      "sessionId": "cb5d0ac7-ea85-4ac8-96ac-8de00aeee455",
+      "updatedAt": 1771137261547,
+      "systemSent": true,
+      "abortedLastRun": false,
+      "chatType": "direct",
+      "deliveryContext": {
+        "channel": "telegram",
+        "to": "telegram:8303268235",
+        "accountId": "default"
+      },
+      "lastChannel": "telegram",
+      "origin": {
+        "provider": "telegram",
+        "surface": "telegram",
+        "chatType": "direct",
+        "label": "Cardo-nah id:8303268235",
+        "from": "telegram:8303268235",
+        "to": "telegram:8303268235",
+        "accountId": "default"
+      },
+      "sessionFile": "/home/koss/.clawdbot/agents/main/sessions/cb5d0ac7-ea85-4ac8-96ac-8de00aeee455.jsonl",
+      "compactionCount": 0,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-frames</name>\n    <description>Extract frames or short clips from videos using ffmpeg.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "video-frames"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "video-frames",
+            "description": "Extract frames or short clips from videos using ffmpeg.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "inputTokens": 37443,
+      "outputTokens": 294,
+      "totalTokens": 37443,
+      "modelProvider": "openai-codex",
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "systemPromptReport": {
+        "source": "run",
+        "generatedAt": 1771137252588,
+        "sessionId": "cb5d0ac7-ea85-4ac8-96ac-8de00aeee455",
+        "sessionKey": "agent:main:main",
+        "provider": "openai-codex",
+        "model": "gpt-5.2",
+        "workspaceDir": "/home/koss/clawd",
+        "bootstrapMaxChars": 20000,
+        "sandbox": {
+          "mode": "off",
+          "sandboxed": false
+        },
+        "systemPrompt": {
+          "chars": 25551,
+          "projectContextChars": 14386,
+          "nonProjectContextChars": 11165
+        },
+        "injectedWorkspaceFiles": [
+          {
+            "name": "AGENTS.md",
+            "path": "/home/koss/clawd/AGENTS.md",
+            "missing": false,
+            "rawChars": 7783,
+            "injectedChars": 7783,
+            "truncated": false
+          },
+          {
+            "name": "SOUL.md",
+            "path": "/home/koss/clawd/SOUL.md",
+            "missing": false,
+            "rawChars": 3637,
+            "injectedChars": 3637,
+            "truncated": false
+          },
+          {
+            "name": "TOOLS.md",
+            "path": "/home/koss/clawd/TOOLS.md",
+            "missing": false,
+            "rawChars": 1325,
+            "injectedChars": 1325,
+            "truncated": false
+          },
+          {
+            "name": "IDENTITY.md",
+            "path": "/home/koss/clawd/IDENTITY.md",
+            "missing": false,
+            "rawChars": 576,
+            "injectedChars": 576,
+            "truncated": false
+          },
+          {
+            "name": "USER.md",
+            "path": "/home/koss/clawd/USER.md",
+            "missing": false,
+            "rawChars": 523,
+            "injectedChars": 523,
+            "truncated": false
+          },
+          {
+            "name": "HEARTBEAT.md",
+            "path": "/home/koss/clawd/HEARTBEAT.md",
+            "missing": false,
+            "rawChars": 166,
+            "injectedChars": 166,
+            "truncated": false
+          },
+          {
+            "name": "BOOTSTRAP.md",
+            "path": "/home/koss/clawd/BOOTSTRAP.md",
+            "missing": true,
+            "rawChars": 0,
+            "injectedChars": 52,
+            "truncated": false
+          }
+        ],
+        "skills": {
+          "promptChars": 3100,
+          "entries": [
+            {
+              "name": "bluebubbles",
+              "blockChars": 393
+            },
+            {
+              "name": "gemini",
+              "blockChars": 319
+            },
+            {
+              "name": "github",
+              "blockChars": 396
+            },
+            {
+              "name": "notion",
+              "blockChars": 326
+            },
+            {
+              "name": "skill-creator",
+              "blockChars": 394
+            },
+            {
+              "name": "slack",
+              "blockChars": 410
+            },
+            {
+              "name": "video-frames",
+              "blockChars": 327
+            },
+            {
+              "name": "weather",
+              "blockChars": 318
+            }
+          ]
+        },
+        "tools": {
+          "listChars": 1926,
+          "schemaChars": 13818,
+          "entries": [
+            {
+              "name": "read",
+              "summaryChars": 232,
+              "schemaChars": 398,
+              "propertiesCount": 4
+            },
+            {
+              "name": "edit",
+              "summaryChars": 129,
+              "schemaChars": 617,
+              "propertiesCount": 6
+            },
+            {
+              "name": "write",
+              "summaryChars": 127,
+              "schemaChars": 313,
+              "propertiesCount": 3
+            },
+            {
+              "name": "exec",
+              "summaryChars": 181,
+              "schemaChars": 1037,
+              "propertiesCount": 12
+            },
+            {
+              "name": "process",
+              "summaryChars": 85,
+              "schemaChars": 844,
+              "propertiesCount": 11
+            },
+            {
+              "name": "browser",
+              "summaryChars": 1343,
+              "schemaChars": 1909,
+              "propertiesCount": 29
+            },
+            {
+              "name": "canvas",
+              "summaryChars": 106,
+              "schemaChars": 661,
+              "propertiesCount": 18
+            },
+            {
+              "name": "nodes",
+              "summaryChars": 94,
+              "schemaChars": 1399,
+              "propertiesCount": 31
+            },
+            {
+              "name": "cron",
+              "summaryChars": 246,
+              "schemaChars": 530,
+              "propertiesCount": 12
+            },
+            {
+              "name": "message",
+              "summaryChars": 112,
+              "schemaChars": 3100,
+              "propertiesCount": 77
+            },
+            {
+              "name": "tts",
+              "summaryChars": 129,
+              "schemaChars": 223,
+              "propertiesCount": 2
+            },
+            {
+              "name": "gateway",
+              "summaryChars": 225,
+              "schemaChars": 465,
+              "propertiesCount": 11
+            },
+            {
+              "name": "agents_list",
+              "summaryChars": 72,
+              "schemaChars": 33,
+              "propertiesCount": 0
+            },
+            {
+              "name": "sessions_list",
+              "summaryChars": 54,
+              "schemaChars": 176,
+              "propertiesCount": 4
+            },
+            {
+              "name": "sessions_history",
+              "summaryChars": 36,
+              "schemaChars": 149,
+              "propertiesCount": 3
+            },
+            {
+              "name": "sessions_send",
+              "summaryChars": 84,
+              "schemaChars": 203,
+              "propertiesCount": 5
+            },
+            {
+              "name": "sessions_spawn",
+              "summaryChars": 107,
+              "schemaChars": 312,
+              "propertiesCount": 8
+            },
+            {
+              "name": "session_status",
+              "summaryChars": 207,
+              "schemaChars": 89,
+              "propertiesCount": 2
+            },
+            {
+              "name": "web_search",
+              "summaryChars": 175,
+              "schemaChars": 733,
+              "propertiesCount": 6
+            },
+            {
+              "name": "web_fetch",
+              "summaryChars": 129,
+              "schemaChars": 360,
+              "propertiesCount": 3
+            },
+            {
+              "name": "memory_search",
+              "summaryChars": 235,
+              "schemaChars": 139,
+              "propertiesCount": 3
+            },
+            {
+              "name": "memory_get",
+              "summaryChars": 151,
+              "schemaChars": 128,
+              "propertiesCount": 3
+            }
+          ]
+        }
+      },
+      "lastTo": "telegram:8303268235",
+      "lastAccountId": "default",
+      "providerOverride": "ollama",
+      "modelOverride": "lume-llama-unbound"
+    },
+    "agent:main:cron:4581a8d1-1ecd-4b44-b5db-ce579aa9ed20": {
+      "sessionId": "119faff6-598c-45b8-ab73-eed6da48ca52",
+      "updatedAt": 1770280200026,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 4020,
+      "outputTokens": 1819,
+      "totalTokens": 73012
+    },
+    "agent:main:cron:cea48707-8d25-42c3-9da6-3eef4400abc6": {
+      "sessionId": "458b379a-242d-40ae-89cd-437995928e06",
+      "updatedAt": 1770280397913,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 1132,
+      "outputTokens": 297,
+      "totalTokens": 10732
+    },
+    "agent:main:cron:e26c1172-0ff5-4c1a-8712-3514cf5c4626": {
+      "sessionId": "c107f90e-425d-4fee-8a4e-c0328ed0ae42",
+      "updatedAt": 1770710400089,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 560,
+      "outputTokens": 455,
+      "totalTokens": 14256
+    },
+    "agent:main:cron:17d11289-5454-4b4f-a284-8b6038c7a298": {
+      "sessionId": "ba6be563-ac2b-4e5d-98a9-0299a8663598",
+      "updatedAt": 1770710484327,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 168,
+      "outputTokens": 357,
+      "totalTokens": 14120
+    },
+    "agent:main:cron:e808d8df-96c9-4f7b-9ade-a434967d47c2": {
+      "sessionId": "51b604b5-da7e-4a29-8e1c-ece0797e3e37",
+      "updatedAt": 1770397200681,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 2118,
+      "outputTokens": 1138,
+      "totalTokens": 31174
+    },
+    "agent:main:cron:d4247f4d-e6eb-4b7e-8096-d93c08957f1d": {
+      "sessionId": "c3c14667-e47c-4c01-aeb0-df6e6c7416e3",
+      "updatedAt": 1771056000096,
+      "systemSent": true,
+      "model": "gpt-5.2",
+      "contextTokens": 400000,
+      "skillsSnapshot": {
+        "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gemini</name>\n    <description>Gemini CLI for one-shot Q&amp;A, summaries, and generation.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>notion</name>\n    <description>Notion API for creating and managing pages, databases, and blocks.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>slack</name>\n    <description>Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>video-frames</name>\n    <description>Extract frames or short clips from videos using ffmpeg.</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+        "skills": [
+          {
+            "name": "bluebubbles"
+          },
+          {
+            "name": "gemini"
+          },
+          {
+            "name": "github"
+          },
+          {
+            "name": "notion"
+          },
+          {
+            "name": "skill-creator"
+          },
+          {
+            "name": "slack"
+          },
+          {
+            "name": "video-frames"
+          },
+          {
+            "name": "weather"
+          }
+        ],
+        "resolvedSkills": [
+          {
+            "name": "bluebubbles",
+            "description": "Build or update the BlueBubbles external channel plugin for Clawdbot (extension package, REST send/probe, webhook inbound).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/bluebubbles",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "gemini",
+            "description": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/gemini",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "github",
+            "description": "Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/github",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "notion",
+            "description": "Notion API for creating and managing pages, databases, and blocks.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/notion",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "skill-creator",
+            "description": "Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/skill-creator",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "slack",
+            "description": "Use when you need to control Slack from Clawdbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/slack",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "video-frames",
+            "description": "Extract frames or short clips from videos using ffmpeg.",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/video-frames",
+            "source": "clawdbot-bundled"
+          },
+          {
+            "name": "weather",
+            "description": "Get current weather and forecasts (no API key required).",
+            "filePath": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather/SKILL.md",
+            "baseDir": "/home/koss/.local/share/pnpm/global/5/.pnpm/clawdbot@2026.1.24-3_@types+express@5.0.6_devtools-protocol@0.0.1575685/node_modules/clawdbot/skills/weather",
+            "source": "clawdbot-bundled"
+          }
+        ],
+        "version": 0
+      },
+      "modelProvider": "openai-codex",
+      "inputTokens": 593,
+      "outputTokens": 459,
+      "totalTokens": 15057
+    }
+  }
+}
