@@ -62,7 +62,8 @@ export async function runNonInteractiveOnboardingLocal(params: {
     runtime.exit(1);
     return;
   }
-  const authChoice = opts.authChoice ?? inferredAuthChoice.choice ?? "skip";
+  const defaultAuthChoice = process.env.ANTIBOT_STATE_DIR?.trim() ? "ollama" : "skip";
+  const authChoice = opts.authChoice ?? inferredAuthChoice.choice ?? defaultAuthChoice;
   const nextConfigAfterAuth = await applyNonInteractiveAuthChoice({
     nextConfig,
     authChoice,

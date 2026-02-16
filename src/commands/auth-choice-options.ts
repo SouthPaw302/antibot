@@ -4,6 +4,11 @@ import { AUTH_CHOICE_LEGACY_ALIASES_FOR_CLI } from "./auth-choice-legacy.js";
 
 export type { AuthChoiceGroupId };
 
+/** AntiBot is local-only (Ollama); restrict auth choices accordingly. */
+export function isAntibotLocalOnly(): boolean {
+  return Boolean(process.env.ANTIBOT_STATE_DIR?.trim());
+}
+
 export type AuthChoiceOption = {
   value: AuthChoice;
   label: string;
@@ -297,6 +302,11 @@ const BASE_AUTH_CHOICE_OPTIONS: ReadonlyArray<AuthChoiceOption> = [
     hint: "Faster, higher output cost",
   },
   { value: "custom-api-key", label: "Custom Provider" },
+  {
+    value: "ollama",
+    label: "Ollama (local)",
+    hint: "Local models via Ollama — no API key needed",
+  },
 ];
 
 export function formatAuthChoiceChoicesForCli(params?: {
@@ -335,6 +345,14 @@ export function buildAuthChoiceGroups(params: { store: AuthProfileStore; include
   groups: AuthChoiceGroup[];
   skipOption?: AuthChoiceOption;
 } {
+  if (isAntibotLocalOnly()) {
+    const ollamaOption = { value: "ollama" as AuthChoice, label: "Ollama (local)", hint: "Local models — no API key needed" };
+    return {
+      groups: [{ value: "ollama", label: "Local", hint: "Ollama only", options: [ollamaOption] }],
+      skipOption: undefined,
+    };
+  }
+
   const options = buildAuthChoiceOptions({
     ...params,
     includeSkip: false,

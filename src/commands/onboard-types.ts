@@ -47,6 +47,7 @@ export type AuthChoice =
   | "xai-api-key"
   | "qianfan-api-key"
   | "custom-api-key"
+  | "ollama"
   | "skip";
 export type AuthChoiceGroupId =
   | "openai"

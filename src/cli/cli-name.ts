@@ -8,7 +8,7 @@ const CLI_PREFIX_RE = /^(?:((?:pnpm|npm|bunx|npx)\s+))?(openclaw|antibot)\b/;
 export function resolveCliName(argv: string[] = process.argv): string {
   const argv1 = argv[1];
   if (!argv1) {
-    return process.env.ANTIBOT_STATE_DIR ? "antibot" : DEFAULT_CLI_NAME;
+    return "antibot";
   }
   const base = path.basename(argv1).trim();
   if (base === "antibot" || base === "antibot.mjs") {
@@ -17,7 +17,7 @@ export function resolveCliName(argv: string[] = process.argv): string {
   if (KNOWN_CLI_NAMES.has(base)) {
     return base;
   }
-  return process.env.ANTIBOT_STATE_DIR ? "antibot" : DEFAULT_CLI_NAME;
+  return "antibot";
 }
 
 export function replaceCliName(command: string, cliName = resolveCliName()): string {

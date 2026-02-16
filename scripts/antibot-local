@@ -3,10 +3,16 @@ set -euo pipefail
 
 # AntiBot local launcher: starts Ollama, gateway, and opens dashboard.
 # Works without internet (dashboard + Ollama). Telegram needs network.
+# Run from WSL with Node 22 (nvm use 22). Ensures Node >=22.12 via antibot-env.sh.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ANTIBOT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-URL="http://127.0.0.1:18789/"
+# Ensure Node 22 in this shell (required for gateway)
+if [[ -f "$SCRIPT_DIR/antibot-env.sh" ]]; then
+  # shellcheck source=antibot-env.sh
+  . "$SCRIPT_DIR/antibot-env.sh"
+fi
+URL="http://127.0.0.1:18889/"
 
 # Start Ollama if not responding
 if command -v ollama >/dev/null 2>&1; then
@@ -16,12 +22,20 @@ if command -v ollama >/dev/null 2>&1; then
   fi
 fi
 
-# Start gateway if not already running on 18789
+# Ensure local gateway config exists so we don't need --allow-unconfigured
+export ANTIBOT_STATE_DIR="${ANTIBOT_STATE_DIR:-$HOME/.antibot}"
+mkdir -p "$ANTIBOT_STATE_DIR"
+CONFIG_FILE="$ANTIBOT_STATE_DIR/antibot.json"
+if [[ ! -f "$CONFIG_FILE" ]] || ! grep -qE '"mode"\s*:\s*"local"' "$CONFIG_FILE" 2>/dev/null; then
+  # Write minimal config (gateway.mode=local required for startup)
+  printf '%s\n' '{"gateway":{"mode":"local","bind":"loopback"}}' > "$CONFIG_FILE"
+fi
+
+# Start gateway if not already running on 18889
 if ! curl -fsS --max-time 1 "$URL" >/dev/null 2>&1; then
   echo "Starting AntiBot gateway..."
   cd "$ANTIBOT_ROOT"
-  export ANTIBOT_STATE_DIR="${ANTIBOT_STATE_DIR:-$HOME/.antibot}"
-  nohup node antibot.mjs gateway --port 18789 >/tmp/antibot-gateway.log 2>&1 &
+  nohup node antibot.mjs gateway --port 18889 >/tmp/antibot-gateway.log 2>&1 &
   sleep 2
 fi
 

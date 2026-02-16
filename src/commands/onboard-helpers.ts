@@ -24,6 +24,7 @@ import {
   shortenHomePath,
   sleep,
 } from "../utils.js";
+import { resolveCliName } from "../cli/cli-name.js";
 import { GATEWAY_CLIENT_MODES, GATEWAY_CLIENT_NAMES } from "../utils/message-channel.js";
 import { VERSION } from "../version.js";
 
@@ -103,7 +104,7 @@ export function printWizardHeader(runtime: RuntimeEnv) {
     "██░███░██░▀▀░██░▄▄▄██░█░█░██░█████░████░▀▀░██░█░█░██",
     "██░▀▀▀░██░█████░▀▀▀██░██▄░██░▀▀▄██░▀▀░█░██░██▄▀▄▀▄██",
     "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
-    "                  🦞 OPENCLAW 🦞                    ",
+    `                  🦞 ${resolveCliName() === "antibot" ? "ANTIBOT" : "OPENCLAW"} 🦞                    `,
     " ",
   ].join("\n");
   runtime.log(header);

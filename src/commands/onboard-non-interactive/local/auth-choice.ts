@@ -69,6 +69,31 @@ export async function applyNonInteractiveAuthChoice(params: {
   const { authChoice, opts, runtime, baseConfig } = params;
   let nextConfig = params.nextConfig;
 
+  if (authChoice === "ollama") {
+    const { upsertSharedEnvVar } = await import("../../../infra/env-file.js");
+    const { shortenHomePath } = await import("../../../utils.js");
+    const result = upsertSharedEnvVar({ key: "OLLAMA_API_KEY", value: "ollama-local" });
+    runtime.log(`Saved OLLAMA_API_KEY to ${shortenHomePath(result.path)}`);
+    nextConfig = {
+      ...nextConfig,
+      env: {
+        ...nextConfig.env,
+        vars: { ...nextConfig.env?.vars, OLLAMA_API_KEY: "ollama-local" },
+      },
+      agents: {
+        ...nextConfig.agents,
+        defaults: {
+          ...nextConfig.agents?.defaults,
+          model: {
+            ...nextConfig.agents?.defaults?.model,
+            primary: "ollama/lume-llama-unbound",
+          },
+        },
+      },
+    };
+    return nextConfig;
+  }
+
   if (authChoice === "claude-cli" || authChoice === "codex-cli") {
     runtime.error(
       [

@@ -13,6 +13,7 @@ import { applyAuthChoiceOAuth } from "./auth-choice.apply.oauth.js";
 import { applyAuthChoiceOpenAI } from "./auth-choice.apply.openai.js";
 import { applyAuthChoiceQwenPortal } from "./auth-choice.apply.qwen-portal.js";
 import { applyAuthChoiceVllm } from "./auth-choice.apply.vllm.js";
+import { applyAuthChoiceOllama } from "./auth-choice.apply.ollama.js";
 import { applyAuthChoiceXAI } from "./auth-choice.apply.xai.js";
 
 export type ApplyAuthChoiceParams = {
@@ -42,6 +43,7 @@ export async function applyAuthChoice(
   params: ApplyAuthChoiceParams,
 ): Promise<ApplyAuthChoiceResult> {
   const handlers: Array<(p: ApplyAuthChoiceParams) => Promise<ApplyAuthChoiceResult | null>> = [
+    applyAuthChoiceOllama,
     applyAuthChoiceAnthropic,
     applyAuthChoiceVllm,
     applyAuthChoiceOpenAI,

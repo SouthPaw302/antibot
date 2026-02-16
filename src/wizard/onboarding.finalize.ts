@@ -426,8 +426,8 @@ export async function finalizeOnboardingWizard(
       [
         `Dashboard link (with token): ${authedUrl}`,
         controlUiOpened
-          ? "Opened in your browser. Keep that tab to control OpenClaw."
-          : "Copy/paste this URL in a browser on this machine to control OpenClaw.",
+          ? `Opened in your browser. Keep that tab to control ${productName}.`
+          : `Copy/paste this URL in a browser on this machine to control ${productName}.`,
         controlUiOpenHint,
       ]
         .filter(Boolean)
