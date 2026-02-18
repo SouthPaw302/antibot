@@ -12,6 +12,30 @@ import { randomUUID } from "node:crypto";
 
 export const OLLAMA_NATIVE_BASE_URL = "http://127.0.0.1:11434";
 
+/** Minimum time allowed for Ollama request (model load can take 30–90s on CPU). */
+const OLLAMA_FETCH_MIN_TIMEOUT_MS = 120_000;
+
+function combineAbortSignals(signals: (AbortSignal | undefined | null)[]): AbortSignal {
+  const controller = new AbortController();
+  const cleanup: (() => void)[] = [];
+  for (const s of signals) {
+    if (!s) continue;
+    if (s.aborted) {
+      controller.abort();
+      return controller.signal;
+    }
+    const onAbort = () => controller.abort();
+    s.addEventListener("abort", onAbort);
+    cleanup.push(() => s.removeEventListener("abort", onAbort));
+  }
+  controller.signal.addEventListener(
+    "abort",
+    () => cleanup.forEach((f) => f()),
+    { once: true },
+  );
+  return controller.signal;
+}
+
 // ── Ollama /api/chat request types ──────────────────────────────────────────
 
 interface OllamaChatRequest {
@@ -323,11 +347,16 @@ export function createOllamaStreamFn(baseUrl: string): StreamFn {
           headers.Authorization = `Bearer ${options.apiKey}`;
         }
 
+        // Allow enough time for first request (model load can take 30–90s on CPU).
+        const fetchSignal = combineAbortSignals([
+          options?.signal,
+          AbortSignal.timeout(OLLAMA_FETCH_MIN_TIMEOUT_MS),
+        ]);
         const response = await fetch(chatUrl, {
           method: "POST",
           headers,
           body: JSON.stringify(body),
-          signal: options?.signal,
+          signal: fetchSignal,
         });
 
         if (!response.ok) {

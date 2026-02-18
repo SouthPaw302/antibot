@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
 import module from "node:module";
+import { spawn } from "node:child_process";
+import path from "node:path";
+import fs from "node:fs";
+import process from "node:process";
 
 // https://nodejs.org/api/module.html#module-compile-cache
 if (module.enableCompileCache && !process.env.NODE_DISABLE_COMPILE_CACHE) {
@@ -15,7 +19,6 @@ const isModuleNotFoundError = (err) =>
   err && typeof err === "object" && "code" in err && err.code === "ERR_MODULE_NOT_FOUND";
 
 const installProcessWarningFilter = async () => {
-  // Keep bootstrap warnings consistent with the TypeScript runtime.
   for (const specifier of ["./dist/warning-filter.js", "./dist/warning-filter.mjs"]) {
     try {
       const mod = await import(specifier);
@@ -24,9 +27,7 @@ const installProcessWarningFilter = async () => {
         return;
       }
     } catch (err) {
-      if (isModuleNotFoundError(err)) {
-        continue;
-      }
+      if (isModuleNotFoundError(err)) continue;
       throw err;
     }
   }
@@ -34,23 +35,27 @@ const installProcessWarningFilter = async () => {
 
 await installProcessWarningFilter();
 
-const tryImport = async (specifier) => {
-  try {
-    await import(specifier);
-    return true;
-  } catch (err) {
-    // Only swallow missing-module errors; rethrow real runtime errors.
-    if (isModuleNotFoundError(err)) {
-      return false;
-    }
-    throw err;
-  }
-};
-
-if (await tryImport("./dist/entry.js")) {
-  // OK
-} else if (await tryImport("./dist/entry.mjs")) {
-  // OK
-} else {
-  throw new Error("openclaw: missing dist/entry.(m)js (build output).");
+// ClawdBot verbatim: run dist/entry.js in a subprocess (no tsx, no in-process bundle load).
+const cwd = process.cwd();
+const distEntryJs = path.join(cwd, "dist", "entry.js");
+const distEntryMjs = path.join(cwd, "dist", "entry.mjs");
+const entryPath = fs.existsSync(distEntryJs) ? distEntryJs : fs.existsSync(distEntryMjs) ? distEntryMjs : null;
+if (!entryPath) {
+  throw new Error("openclaw: missing dist/entry.(m)js (run pnpm build).");
 }
+
+const child = spawn(process.execPath, [entryPath, ...process.argv.slice(2)], {
+  stdio: "inherit",
+  env: process.env,
+  cwd,
+});
+
+child.on("exit", (code, signal) => {
+  if (signal) process.exit(1);
+  process.exit(code ?? 1);
+});
+
+child.on("error", (err) => {
+  console.error("[openclaw] Failed to run entry:", err?.message ?? err);
+  process.exit(1);
+});

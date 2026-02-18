@@ -176,8 +176,9 @@ const logRunner = (message, deps) => {
   deps.stderr.write(`[openclaw] ${message}\n`);
 };
 
+// ClawdBot verbatim: spawn dist/entry.js directly (no openclaw.mjs in the chain).
 const runOpenClaw = async (deps) => {
-  const nodeProcess = deps.spawn(deps.execPath, ["openclaw.mjs", ...deps.args], {
+  const nodeProcess = deps.spawn(deps.execPath, ["dist/entry.js", ...deps.args], {
     cwd: deps.cwd,
     env: deps.env,
     stdio: "inherit",
@@ -234,9 +235,14 @@ export async function runNodeMain(params = {}) {
   const buildCmd = deps.platform === "win32" ? "cmd.exe" : "pnpm";
   const buildArgs =
     deps.platform === "win32" ? ["/d", "/s", "/c", "pnpm", ...compilerArgs] : compilerArgs;
+  // Ensure build uses same Node as this runner (e.g. nvm's Node 22)
+  const buildEnv = { ...deps.env };
+  const nodeBinDir = path.dirname(deps.execPath);
+  const sep = deps.platform === "win32" ? ";" : ":";
+  buildEnv.PATH = `${nodeBinDir}${sep}${buildEnv.PATH || ""}`;
   const build = deps.spawn(buildCmd, buildArgs, {
     cwd: deps.cwd,
-    env: deps.env,
+    env: buildEnv,
     stdio: "inherit",
   });
 

@@ -12,14 +12,34 @@ if [[ -f "$SCRIPT_DIR/antibot-env.sh" ]]; then
   # shellcheck source=antibot-env.sh
   . "$SCRIPT_DIR/antibot-env.sh"
 fi
-URL="http://127.0.0.1:18889/"
+BASE_URL="http://127.0.0.1:18889/"
+# Resolve dashboard URL with token for one-click auth (from config or env)
+get_dashboard_url() {
+  local token=""
+  if [[ -n "${OPENCLAW_GATEWAY_TOKEN:-}" ]]; then
+    token="$OPENCLAW_GATEWAY_TOKEN"
+  elif [[ -n "${ANTIBOT_GATEWAY_TOKEN:-}" ]]; then
+    token="$ANTIBOT_GATEWAY_TOKEN"
+  elif [[ -f "${ANTIBOT_STATE_DIR:-$HOME/.antibot}/antibot.json" ]]; then
+    token=$(jq -r '.gateway.auth.token // empty' "${ANTIBOT_STATE_DIR:-$HOME/.antibot}/antibot.json" 2>/dev/null) || \
+    token=$(grep -oE '"token"\s*:\s*"[^"]+' "${ANTIBOT_STATE_DIR:-$HOME/.antibot}/antibot.json" 2>/dev/null | head -1 | sed 's/.*"\([^"]*\)$/\1/') || true
+  fi
+  if [[ -n "$token" ]]; then
+    echo "${BASE_URL}#token=${token}"
+  else
+    echo "$BASE_URL"
+  fi
+}
 
 # Start Ollama if not responding
 if command -v ollama >/dev/null 2>&1; then
+  export OLLAMA_KEEP_ALIVE="${OLLAMA_KEEP_ALIVE:--1}"
   if ! curl -fsS --max-time 1 http://127.0.0.1:11434/api/tags >/dev/null 2>&1; then
     (nohup ollama serve >/tmp/ollama-serve.log 2>&1 &) || true
     sleep 0.5
   fi
+  # Pre-warm lume-llama-unbound so first chat request doesn't time out (load takes 30-90s on CPU)
+  (ollama run lume-llama-unbound "hi" >/dev/null 2>&1 &) || true
 fi
 
 # Ensure local gateway config exists so we don't need --allow-unconfigured
@@ -32,13 +52,16 @@ if [[ ! -f "$CONFIG_FILE" ]] || ! grep -qE '"mode"\s*:\s*"local"' "$CONFIG_FILE"
 fi
 
 # Start gateway if not already running on 18889
-if ! curl -fsS --max-time 1 "$URL" >/dev/null 2>&1; then
+if ! curl -fsS --max-time 1 "$BASE_URL" >/dev/null 2>&1; then
   echo "Starting AntiBot gateway..."
   cd "$ANTIBOT_ROOT"
-  nohup node antibot.mjs gateway --port 18889 >/tmp/antibot-gateway.log 2>&1 &
+  NODE_BIN="$(which node)"
+  # ClawdBot verbatim: run-node.mjs builds if needed then spawns node dist/entry.js (no openclaw/tsx).
+  nohup "$NODE_BIN" scripts/run-node.mjs gateway --port 18889 >/tmp/antibot-gateway.log 2>&1 &
   sleep 2
 fi
 
+URL="$(get_dashboard_url)"
 if command -v xdg-open >/dev/null 2>&1; then
   xdg-open "$URL" >/dev/null 2>&1 &
   echo "Opened: $URL"

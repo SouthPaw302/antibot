@@ -7,5 +7,4 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 
 process.env.ANTIBOT_STATE_DIR = process.env.ANTIBOT_STATE_DIR || join(homedir(), ".antibot");
-
 await import("./openclaw.mjs");

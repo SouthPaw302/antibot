@@ -273,7 +273,8 @@ describe("createOllamaStreamFn", () => {
       expect(fetchMock).toHaveBeenCalledTimes(1);
       const [url, requestInit] = fetchMock.mock.calls[0] as [string, RequestInit];
       expect(url).toBe("http://ollama-host:11434/api/chat");
-      expect(requestInit.signal).toBe(signal);
+      expect(requestInit.signal).toBeInstanceOf(AbortSignal);
+      expect(requestInit.signal?.aborted).toBe(false);
       if (typeof requestInit.body !== "string") {
         throw new Error("Expected string request body");
       }
