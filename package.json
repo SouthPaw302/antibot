@@ -1,7 +1,7 @@
 {
-  "name": "openclaw",
+  "name": "antibot",
   "version": "2026.2.15",
-  "description": "Multi-channel AI gateway with extensible messaging integrations",
+  "description": "AntiBot — Multi-channel AI gateway (AntiBot Gateway) with extensible messaging integrations",
   "keywords": [],
   "license": "MIT",
   "author": "",
@@ -12,7 +12,7 @@
   "files": [
     "CHANGELOG.md",
     "LICENSE",
-    "openclaw.mjs",
+    "antibot.mjs",
     "README-header.png",
     "README.md",
     "assets/",
@@ -33,7 +33,7 @@
       "types": "./dist/plugin-sdk/account-id.d.ts",
       "default": "./dist/plugin-sdk/account-id.js"
     },
-    "./cli-entry": "./openclaw.mjs"
+    "./cli-entry": "./antibot.mjs"
   },
   "scripts": {
     "android:assemble": "cd apps/android && ./gradlew :app:assembleDebug",

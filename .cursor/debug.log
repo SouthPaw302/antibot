@@ -1,0 +1,5 @@
+{"location":"antibot-local:13","message":"script started","data":{"antibot_root":"/mnt/c/Projects/antibot","pwd":"/mnt/c/Projects/antibot"},"timestamp":1771211409000,"hypothesisId":"C,E"}
+{"location":"antibot-local:58","message":"gateway not responding, starting","data":{"port":18889,"cwd":"/mnt/c/Projects/antibot"},"timestamp":1771211421000,"hypothesisId":"C"}
+{"location":"antibot-local:63","message":"launching gateway with nohup","data":{"cmd":"node antibot.mjs gateway --port 18889"},"timestamp":1771211421000,"hypothesisId":"A,C"}
+{"location":"antibot-local:68","message":"gateway launched","data":{"pid":70200},"timestamp":1771211421000,"hypothesisId":"C"}
+{"location":"antibot-local:73","message":"gateway process still alive after 2s","data":{"pid":70200},"timestamp":1771211423000,"hypothesisId":"A,C"}

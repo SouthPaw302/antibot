@@ -68,9 +68,13 @@ export function resolveStateDir(
   homedir: () => string = envHomedir(env),
 ): string {
   const effectiveHomedir = () => resolveRequiredHomeDir(env, homedir);
+  // Always check process.env for ANTIBOT_STATE_DIR even if not in passed env (for compatibility)
   const override =
+    process.env.ANTIBOT_STATE_DIR?.trim() ||
     env.ANTIBOT_STATE_DIR?.trim() ||
+    process.env.OPENCLAW_STATE_DIR?.trim() ||
     env.OPENCLAW_STATE_DIR?.trim() ||
+    process.env.CLAWDBOT_STATE_DIR?.trim() ||
     env.CLAWDBOT_STATE_DIR?.trim();
   if (override) {
     return resolveUserPath(override, env, effectiveHomedir);

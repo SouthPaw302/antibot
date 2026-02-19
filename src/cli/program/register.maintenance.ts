@@ -11,7 +11,7 @@ import { runCommandWithRuntime } from "../cli-utils.js";
 export function registerMaintenanceCommands(program: Command) {
   program
     .command("doctor")
-    .description("Health checks + quick fixes for the gateway and channels")
+    .description("Health checks + quick fixes for the AntiBot Gateway and channels")
     .addHelpText(
       "after",
       () =>
@@ -41,7 +41,7 @@ export function registerMaintenanceCommands(program: Command) {
 
   program
     .command("dashboard")
-    .description("Open the Control UI with your current token")
+    .description("Open the AntiBot dashboard (Control UI) with your current token")
     .addHelpText(
       "after",
       () =>
@@ -81,7 +81,7 @@ export function registerMaintenanceCommands(program: Command) {
 
   program
     .command("uninstall")
-    .description("Uninstall the gateway service + local data (CLI remains)")
+    .description("Uninstall the AntiBot Gateway service + local data (CLI remains)")
     .addHelpText(
       "after",
       () =>

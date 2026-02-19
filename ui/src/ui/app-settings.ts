@@ -95,9 +95,16 @@ export function applySettingsFromUrl(host: SettingsHost) {
   const gatewayUrlRaw = params.get("gatewayUrl") ?? hashParams.get("gatewayUrl");
   let shouldCleanUrl = false;
 
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/bf246bd5-3657-451c-9eb6-f2fd8754f648',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'de2c92'},body:JSON.stringify({sessionId:'de2c92',location:'app-settings.ts:92',message:'applySettingsFromUrl: token extraction',data:{hasHash:!!window.location.hash,hash:window.location.hash.substring(0,50),tokenRaw:tokenRaw?.substring(0,20)||null,currentToken:host.settings.token?.substring(0,20)||null},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+  // #endregion
+
   if (tokenRaw != null) {
     const token = tokenRaw.trim();
     if (token && token !== host.settings.token) {
+      // #region agent log
+      fetch('http://127.0.0.1:7243/ingest/bf246bd5-3657-451c-9eb6-f2fd8754f648',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'de2c92'},body:JSON.stringify({sessionId:'de2c92',location:'app-settings.ts:101',message:'applySettingsFromUrl: applying token',data:{tokenLength:token.length,tokenPrefix:token.substring(0,20)},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
       applySettings(host, { ...host.settings, token });
     }
     params.delete("token");

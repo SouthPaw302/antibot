@@ -51,11 +51,16 @@ function resolveRunner() {
 }
 
 function run(cmd, args) {
-  const child = spawn(cmd, args, {
+  const opts = {
     cwd: uiDir,
     stdio: "inherit",
     env: process.env,
-  });
+  };
+  // Windows: spawn of .cmd/.bat is blocked without shell (Node CVE-2024-27980)
+  if (process.platform === "win32") {
+    opts.shell = true;
+  }
+  const child = spawn(cmd, args, opts);
   child.on("exit", (code, signal) => {
     if (signal) {
       process.exit(1);
@@ -65,11 +70,15 @@ function run(cmd, args) {
 }
 
 function runSync(cmd, args, envOverride) {
-  const result = spawnSync(cmd, args, {
+  const opts = {
     cwd: uiDir,
     stdio: "inherit",
     env: envOverride ?? process.env,
-  });
+  };
+  if (process.platform === "win32") {
+    opts.shell = true;
+  }
+  const result = spawnSync(cmd, args, opts);
   if (result.signal) {
     process.exit(1);
   }

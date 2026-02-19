@@ -22,4 +22,4 @@ ollama create lume-qwen -f ollama/Modelfile.lume-qwen
 
 ## Use with Clawdbot
 
-Point the Lume agent at `lume-llama-unbound` in `~/.clawdbot/clawdbot.json` (or your model config) when you want the unbound variant.
+Point the Lume agent at `lume-llama-unbound` in `~/.antibot/antibot.json` (or your model config) when you want the unbound variant.

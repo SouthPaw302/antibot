@@ -1,6 +1,8 @@
 import type { IncomingMessage } from "node:http";
 import type { WebSocket } from "ws";
 import os from "node:os";
+import { appendFileSync } from "node:fs";
+import { join } from "node:path";
 import type { createSubsystemLogger } from "../../../logging/subsystem.js";
 import type { GatewayAuthResult, ResolvedGatewayAuth } from "../../auth.js";
 import type { GatewayRequestContext, GatewayRequestHandlers } from "../../server-methods/types.js";
@@ -347,6 +349,9 @@ export function attachGatewayWsMessageHandler(params: {
           isControlUi && configSnapshot.gateway?.controlUi?.dangerouslyDisableDeviceAuth === true;
         const allowControlUiBypass = allowInsecureControlUi || disableControlUiDeviceAuth;
         const device = disableControlUiDeviceAuth ? null : deviceRaw;
+        // #region agent log
+        try{const logPath=join(process.cwd(),'debug-de2c92.log');appendFileSync(logPath,JSON.stringify({sessionId:'de2c92',location:'message-handler.ts:348',message:'gateway: controlUi bypass check',data:{isControlUi,allowInsecureControlUi,disableControlUiDeviceAuth,allowControlUiBypass,hasDevice:!!device,hasSharedAuth},timestamp:Date.now(),hypothesisId:'B'})+'\n');}catch(e){}
+        // #endregion
 
         const hasDeviceTokenCandidate = Boolean(connectParams.auth?.token && device);
         let authResult: GatewayAuthResult = await authorizeGatewayConnect({
@@ -397,6 +402,9 @@ export function attachGatewayWsMessageHandler(params: {
           (sharedAuthResult.method === "token" || sharedAuthResult.method === "password");
         const rejectUnauthorized = (failedAuth: GatewayAuthResult) => {
           setHandshakeState("failed");
+          // #region agent log
+          try{const logPath=join(process.cwd(),'debug-de2c92.log');appendFileSync(logPath,JSON.stringify({sessionId:'de2c92',location:'message-handler.ts:rejectUnauthorized',message:'auth rejected',data:{reason:failedAuth.reason,hasConnectToken:!!connectParams.auth?.token,clientId:connectParams.client?.id},timestamp:Date.now(),hypothesisId:'D'})+'\n');}catch(e){}
+          // #endregion
           logWsControl.warn(
             `unauthorized conn=${connId} remote=${remoteAddr ?? "?"} client=${clientLabel} ${connectParams.client.mode} v${connectParams.client.version} reason=${failedAuth.reason ?? "unknown"}`,
           );
@@ -662,6 +670,9 @@ export function attachGatewayWsMessageHandler(params: {
         }
 
         const skipPairing = allowControlUiBypass && sharedAuthOk;
+        // #region agent log
+        try{const logPath=join(process.cwd(),'debug-de2c92.log');appendFileSync(logPath,JSON.stringify({sessionId:'de2c92',location:'message-handler.ts:664',message:'gateway: device pairing skip check',data:{skipPairing,allowControlUiBypass,sharedAuthOk,hasDevice:!!device,hasDevicePublicKey:!!devicePublicKey},timestamp:Date.now(),hypothesisId:'C'})+'\n');}catch(e){}
+        // #endregion
         if (device && devicePublicKey && !skipPairing) {
           const requirePairing = async (reason: string, _paired?: { deviceId: string }) => {
             const pairing = await requestDevicePairing({

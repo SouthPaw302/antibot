@@ -47,13 +47,13 @@ const AUTH_CHOICE_HELP = formatAuthChoiceChoicesForCli({
 export function registerOnboardCommand(program: Command) {
   const command = program
     .command("onboard")
-    .description("Interactive wizard to set up the gateway, workspace, and skills")
+    .description("Interactive wizard to set up the AntiBot Gateway, workspace, and skills")
     .addHelpText(
       "after",
       () =>
         `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/onboard", "docs.openclaw.ai/cli/onboard")}\n`,
     )
-    .option("--workspace <dir>", "Agent workspace directory (default: ~/.openclaw/workspace)")
+    .option("--workspace <dir>", "Agent workspace directory (default: ~/.antibot/workspace)")
     .option("--reset", "Reset config + credentials + sessions + workspace before running wizard")
     .option("--non-interactive", "Run without prompts", false)
     .option(

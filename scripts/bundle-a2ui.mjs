@@ -1,13 +1,13 @@
 #!/usr/bin/env node
+import { spawnSync } from "node:child_process";
 /**
  * Cross-platform A2UI bundle script (Node-based; works in WSL and Windows).
  */
 import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
+import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createRequire } from "node:module";
-import { spawnSync } from "node:child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, "..");
@@ -47,7 +47,9 @@ async function computeHash() {
     }
   }
   const normalize = (p) => p.split(path.sep).join("/");
-  files.sort((a, b) => normalize(path.relative(ROOT_DIR, a)).localeCompare(normalize(path.relative(ROOT_DIR, b))));
+  files.sort((a, b) =>
+    normalize(path.relative(ROOT_DIR, a)).localeCompare(normalize(path.relative(ROOT_DIR, b))),
+  );
   const hash = createHash("sha256");
   for (const filePath of files) {
     const rel = normalize(path.relative(ROOT_DIR, filePath));
@@ -64,7 +66,12 @@ async function main() {
     await fs.access(A2UI_RENDERER_DIR);
     await fs.access(A2UI_APP_DIR);
   } catch {
-    if (await fs.access(OUTPUT_FILE).then(() => true).catch(() => false)) {
+    if (
+      await fs
+        .access(OUTPUT_FILE)
+        .then(() => true)
+        .catch(() => false)
+    ) {
       console.log("A2UI sources missing; keeping prebuilt bundle.");
       process.exit(0);
     }
@@ -90,20 +97,24 @@ async function main() {
   }
 
   const tscArgs = ["-s", "exec", "tsc", "-p", path.join(A2UI_RENDERER_DIR, "tsconfig.json")];
-  const tscResult = spawnSync("pnpm", tscArgs, {
-    cwd: ROOT_DIR,
-    stdio: "inherit",
-  });
+  const spawnOpts = { cwd: ROOT_DIR, stdio: "inherit" };
+  if (process.platform === "win32") {
+    spawnOpts.shell = true;
+  }
+  const tscResult = spawnSync("pnpm", tscArgs, spawnOpts);
   if (tscResult.status !== 0) {
     console.error("A2UI bundling failed at tsc step. Re-run with: pnpm canvas:a2ui:bundle");
     process.exit(1);
   }
 
-  const rolldownArgs = ["-s", "exec", "rolldown", "-c", path.join(A2UI_APP_DIR, "rolldown.config.mjs")];
-  const rolldownResult = spawnSync("pnpm", rolldownArgs, {
-    cwd: ROOT_DIR,
-    stdio: "inherit",
-  });
+  const rolldownArgs = [
+    "-s",
+    "exec",
+    "rolldown",
+    "-c",
+    path.join(A2UI_APP_DIR, "rolldown.config.mjs"),
+  ];
+  const rolldownResult = spawnSync("pnpm", rolldownArgs, spawnOpts);
   if (rolldownResult.status !== 0) {
     console.error("A2UI bundling failed at rolldown step. Re-run with: pnpm canvas:a2ui:bundle");
     process.exit(1);

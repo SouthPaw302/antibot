@@ -8,6 +8,7 @@ import type { AgentsListResult, PresenceEntry, HealthSnapshot, StatusSummary } f
 import { CHAT_SESSIONS_ACTIVE_MINUTES, flushChatQueueForEvent } from "./app-chat.ts";
 import {
   applySettings,
+  applySettingsFromUrl,
   loadCron,
   refreshActiveTab,
   setLastActiveSessionKey,
@@ -27,6 +28,7 @@ import {
 import { loadNodes } from "./controllers/nodes.ts";
 import { loadSessions } from "./controllers/sessions.ts";
 import { GatewayBrowserClient } from "./gateway.ts";
+import { GATEWAY_CLIENT_NAMES } from "../../../src/gateway/protocol/client-info.js";
 
 type GatewayHost = {
   settings: UiSettings;
@@ -122,12 +124,34 @@ export function connectGateway(host: GatewayHost) {
   host.execApprovalQueue = [];
   host.execApprovalError = null;
 
+  // Re-apply token/params from URL before every connection so link-with-token always works
+  applySettingsFromUrl(host as unknown as Parameters<typeof applySettingsFromUrl>[0]);
+
+  // Fallback: read token from current URL at connect time (hash or query) so token-in-link works even if applySettingsFromUrl didn't run or hash was stripped
+  const tokenFromUrl =
+    typeof window !== "undefined" && window.location?.href
+      ? (() => {
+          const u = new URL(window.location.href);
+          const fromHash = new URLSearchParams(u.hash.startsWith("#") ? u.hash.slice(1) : u.hash).get("token")?.trim();
+          const fromSearch = u.searchParams.get("token")?.trim();
+          return fromHash || fromSearch || undefined;
+        })()
+      : undefined;
+  const effectiveToken = (host.settings.token?.trim() || tokenFromUrl) || undefined;
+  if (tokenFromUrl && effectiveToken === tokenFromUrl && host.settings.token?.trim() !== tokenFromUrl) {
+    applySettings(host as unknown as Parameters<typeof applySettings>[0], { ...host.settings, token: tokenFromUrl });
+  }
+
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/bf246bd5-3657-451c-9eb6-f2fd8754f648',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'de2c92'},body:JSON.stringify({sessionId:'de2c92',location:'app-gateway.ts:119',message:'connectGateway: starting connection',data:{gatewayUrl:host.settings.gatewayUrl,hasToken:!!effectiveToken,tokenFromUrl:!!tokenFromUrl},timestamp:Date.now(),hypothesisId:'E',runId:'post-fix'})}).catch(()=>{});
+  // #endregion
+
   const previousClient = host.client;
   const client = new GatewayBrowserClient({
     url: host.settings.gatewayUrl,
-    token: host.settings.token.trim() ? host.settings.token : undefined,
+    token: effectiveToken,
     password: host.password.trim() ? host.password : undefined,
-    clientName: "antibot-control-ui",
+    clientName: GATEWAY_CLIENT_NAMES.CONTROL_UI,
     mode: "webchat",
     onHello: (hello) => {
       if (host.client !== client) {

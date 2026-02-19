@@ -155,6 +155,9 @@ export class GatewayBrowserClient {
       authToken = storedToken ?? this.opts.token;
       canFallbackToShared = Boolean(storedToken && this.opts.token);
     }
+    // #region agent log
+    fetch('http://127.0.0.1:7243/ingest/bf246bd5-3657-451c-9eb6-f2fd8754f648',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'de2c92'},body:JSON.stringify({sessionId:'de2c92',location:'gateway.ts:158',message:'sendConnect: auth token resolved',data:{hasOptsToken:!!this.opts.token,hasAuthToken:!!authToken,authTokenPrefix:authToken?.substring(0,20)||null,hasAuth:!!(authToken||this.opts.password)},timestamp:Date.now(),hypothesisId:'E'})}).catch(()=>{});
+    // #endregion
     const auth =
       authToken || this.opts.password
         ? {

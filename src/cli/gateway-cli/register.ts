@@ -75,7 +75,7 @@ export function registerGatewayCli(program: Command) {
   const gateway = addGatewayRunCommand(
     program
       .command("gateway")
-      .description("Run the WebSocket Gateway")
+      .description("AntiBot Gateway (run, start, stop, status, health, …)")
       .addHelpText(
         "after",
         () =>
@@ -84,11 +84,11 @@ export function registerGatewayCli(program: Command) {
   );
 
   addGatewayRunCommand(
-    gateway.command("run").description("Run the WebSocket Gateway (foreground)"),
+    gateway.command("run").description("Run the AntiBot Gateway (foreground)"),
   );
 
   addGatewayServiceCommands(gateway, {
-    statusDescription: "Show gateway service status + probe the Gateway",
+    statusDescription: "Show AntiBot Gateway service status + probe the Gateway",
   });
 
   gatewayCallOpts(
